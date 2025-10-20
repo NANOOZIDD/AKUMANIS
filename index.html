@@ -1,17 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Profil Digital - [nama anda]</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Profil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <div class="kartu-profil">
-  <img src="photobooth (1).png" alt="Foto profil saya">
-  <hl>Nama lengkap anda</hl>
-  <p>Siswa SMA yang tertarik dengan teknologi dan desain. Selamat adatang di website pertama saya!</p>
-  <a href="https://www.instagram.com/usernameanda">Kunjungi Instagram Saya</a>
-  <button id="sapaButton">Sapa Saya!</button>
- </div> 
-<script src="script.js"></script>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#biodata">Biodata</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#hobi">Hobi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <li><a href="tanya.html">Pertanyaan</a></li>
+        </aside>
+
+        <!-- Konten utama -->
+        <main class="content">
+            <section id="biodata">
+                <h1>Biodata</h1>
+                <img src="poto1.jpeg" alt="Foto Profil">
+                <p><strong>Nama:</strong> Rina Windi</p>
+                <p><strong>Tempat, Tanggal Lahir:</strong> Kediri, 19 Agustus 2008 dan 23 Februari 2009</p>
+                <p><strong>Alamat:</strong> Jl. Smanewa No. 38, Kediri</p>
+                <p><strong>Pekerjaan:</strong> Pelajar</p>
+            </section>
+
+            <section id="pendidikan">
+                <h1>Pendidikan</h1>
+                <ul>
+                    <li>SDN Wates dan SDN Pojok 2 (2014–2020)</li>
+                    <li>SMPN 2 Wates dan SMPN 1 Wates (2020–2023)</li>
+                    <li>SMAN 1 Wates (2023–Sekarang)</li>
+                </ul>
+            </section>
+
+            <section id="hobi">
+                <h1>Hobi</h1>
+                <p>Saya suka membaca buku, mendengarkan musik, dan menulis cerita pendek. Selain itu, saya juga senang membuat desain dan belajar hal baru di dunia digital.</p>
+            </section>
+
+            <section id="kontak">
+                <h1>Kontak</h1>
+                <p><strong>Email:</strong> wihrin@example.com</p>
+                <p><strong>Instagram:</strong> @riwind_id</p>
+                <p><strong>No. HP:</strong> 0812-3456-8900</p>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
