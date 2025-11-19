@@ -1,0 +1,49 @@
+def kasir():
+    menu = {
+        "Fried Chicken": 15000,
+        "Burger Queen": 25000,
+        "French Fries": 10000,
+        "Jasmine Tea": 5000,
+        "Ice Coca-cola": 12000
+    }
+    print("==================== Daftar Menu ====================")
+    for item, price in menu.items():
+        print(f"{item} \t Harga: Rp{price}")
+    print("Pembelian di atas Rp.100.000,- mendapatkan diskon 15%")
+    print("======================================================")
+
+    beli = input("Pilih Menu: ")
+    if beli not in menu:
+        print("Menu tidak tersedia.")
+        return
+
+    jumlah = int(input("Jumlah Pesanan: "))
+    bayar = jumlah * menu[beli]
+
+    # Diskon jika total bayar > 100.000
+    if bayar > 100000:
+        diskon = bayar * 0.15
+        bayar -= diskon
+        print(f"Diskon 15% diterapkan: Rp{int(diskon)}")
+
+    print(f"Total bayar: Rp{int(bayar)}")
+
+    bayar_cash = int(input("Masukkan jumlah pembayaran: "))
+
+    if bayar_cash >= bayar:
+        kembalian = bayar_cash - bayar
+        print(f"Kembalian Anda: Rp{int(kembalian)}")
+    else:
+        kurang = bayar - bayar_cash
+        print(f"Uang Anda kurang sebesar: Rp{int(kurang)}")
+
+def main():
+    while True:
+        kasir()
+        lagi = input("Ingin melakukan transaksi lagi? (y/n): ")
+        if lagi.lower() != 'y':
+            print("Terima kasih telah berbelanja!")
+            break
+
+if __name__ == "__main__":
+    main()
